@@ -1,0 +1,10 @@
+<html>
+<head>
+<title>
+"CICD Sample"
+</title>
+</head>
+<body bgcolor="yellow">
+<h2>This is an demo application by SHRUTI SINGH</h2>
+</body>
+</html>
