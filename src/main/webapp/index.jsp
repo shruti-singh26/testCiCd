@@ -4,7 +4,7 @@
 "CICD Sample"
 </title>
 </head>
-<body bgcolor="yellow">
+<body bgcolor="red">
 <h2>This is an demo application by SHRUTI SINGH</h2>
 </body>
 </html>
