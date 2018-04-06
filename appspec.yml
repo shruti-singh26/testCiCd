@@ -5,6 +5,10 @@ files:
     destination: /tmp/codedeploy-deployment-staging-area/
   - source: /configure_http_port.xsl
     destination: /tmp/codedeploy-deployment-staging-area/
+permissions:
+  - object: /opt/codedeploy-agent
+    pattern: "**"
+    mode: 755
 hooks:
   ApplicationStop:
     - location: stop_application
