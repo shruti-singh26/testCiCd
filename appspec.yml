@@ -3,13 +3,13 @@ os: linux
 files:
   - source: /target/testCiCd.war
     destination: /tmp/codedeploy-deployment-staging-area/
-  - source: /scripts/configure_http_port.xsl
+  - source: /configure_http_port.xsl
     destination: /tmp/codedeploy-deployment-staging-area/
 hooks:
   ApplicationStop:
     - location: stop_application
       timeout: 300
-  BeforeInstall:
+  AfterInstall:
     - location: install_dependencies
       timeout: 300
   ApplicationStart:
