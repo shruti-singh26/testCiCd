@@ -16,6 +16,7 @@ hooks:
   AfterInstall:
     - location: install_dependencies
       timeout: 300
+      runas: root
   ApplicationStart:
     - location: write_codedeploy_config.sh
     - location: start_application
