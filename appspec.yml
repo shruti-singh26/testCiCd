@@ -2,16 +2,19 @@ version: 0.0
 os: linux
 files:
   - source: /target/testCiCd.war
-    destination: /tmp/codedeploy-deployment-staging-area/
+    destination: /usr/share/tomcat8/webapps
   - source: /configure_http_port.xsl
-    destination: /tmp/codedeploy-deployment-staging-area/
-permissions:
-  - object: /opt/codedeploy-agent
-    pattern: "**"
-    mode: 755
+    destination: /usr/share/tomcat8/webapps
+
 hooks:
-  AfterInstall:
+BeforeInstall:
     - location: install_dependencies
       timeout: 300
       runas: root
-
+    - location: start_application
+      timeout: 300
+      runas: root
+ApplicationStop:
+    - location: stop_application
+      timeout: 300
+      runas: root
